@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="74th が作成したシンプルなブラウザーツール。">
+    <title>74th Web Tools</title>
+    <style>
+      :root{color-scheme:dark;--ink:#eef2f8;--muted:#a5afbe;--line:#2a3442;--blue:#82b5ff;--paper:#0e131a;--sans:'DM Sans','Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+      *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}.site-header{height:68px;padding:0 max(28px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;background:#151c25;border-bottom:1px solid var(--line)}.brand{text-decoration:none;font-weight:700;letter-spacing:-.04em;font-size:17px}.brand span{margin-left:7px;font-size:10px;letter-spacing:.13em;color:#9aa7b6;font-weight:600}.repo-link{color:#aab5c3;text-decoration:none;font-size:12px}.repo-link:hover,.tool-link:hover{color:var(--blue)}main{max-width:1120px;margin:0 auto;padding:92px 24px 100px}.eyebrow{margin:0 0 14px;color:#8997a9;font:500 10px ui-monospace,monospace;letter-spacing:.13em}h1{margin:0;font-size:clamp(36px,6vw,58px);letter-spacing:-.06em;line-height:1.1}.intro{max-width:600px;margin:17px 0 55px;color:var(--muted);font-size:14px;line-height:1.8}.section-label{padding-bottom:14px;border-bottom:1px solid var(--line);color:#8997a9;font:500 10px ui-monospace,monospace;letter-spacing:.12em}.tool-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.tool-card{display:flex;min-height:190px;flex-direction:column;padding:23px 24px 20px;border:1px solid var(--line);border-radius:9px;background:#171f2a;text-decoration:none;transition:transform .15s,border-color .15s}.tool-card:hover{transform:translateY(-2px);border-color:#52657a}.tool-meta{color:#9aa7b6;font:10px ui-monospace,monospace;letter-spacing:.08em}.tool-card h2{margin:19px 0 8px;font-size:18px;letter-spacing:-.025em}.tool-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.tool-link{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:17px;color:#c5cfdb;font-size:11px;font-weight:600}.tool-link span{color:var(--blue);font-size:16px}.site-footer{display:flex;justify-content:space-between;max-width:1120px;margin:0 auto;padding:0 24px 30px;color:#8997a9;font-size:10px}.site-footer a{color:#aab5c3;text-decoration:none}@media(max-width:600px){.site-header{height:58px;padding:0 18px}main{padding:62px 18px 72px}.intro{margin-bottom:40px}.tool-list{grid-template-columns:1fr}.tool-card{min-height:170px}.site-footer{padding:0 18px 25px}}@media(max-width:370px){.site-header{padding:0 12px}main{padding-right:12px;padding-left:12px}.site-footer{padding-right:12px;padding-left:12px}}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="74th Web Tools トップページ">74th <span>WEB TOOLS</span></a>
+      <a class="repo-link" href="https://github.com/74th/74th-web-tools">GitHub リポジトリ <span aria-hidden="true">↗</span></a>
+    </header>
+    <main>
+      <p class="eyebrow">SMALL TOOLS, MADE SIMPLE</p>
+      <h1>74th Web Tools</h1>
+      <p class="intro">ブラウザーですぐに使える、小さなウェブツール集です。データはお使いのブラウザー内で処理されます。</p>
+      <div class="section-label">TOOLS <span>01</span></div>
+      <div class="tool-list">
+        <a class="tool-card" href="./vscode-workspace-color/">
+          <span class="tool-meta">VS CODE · COLOR</span>
+          <h2>ワークスペースカラー設定</h2>
+          <p>タイトルバーと Remote SSH インジケーターの色を選び、VS Code 用の設定 JSON を作成します。</p>
+          <span class="tool-link">ツールを開く <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </main>
+    <footer class="site-footer"><a href="https://github.com/74th/74th-web-tools">74th/74th-web-tools</a><span>1 tool available</span></footer>
+  </body>
+</html>

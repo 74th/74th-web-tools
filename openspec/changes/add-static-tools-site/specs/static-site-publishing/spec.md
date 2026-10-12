@@ -35,3 +35,10 @@
 #### Scenario: Add another tool
 - **WHEN** 別の `pages/<tool>/index.html` と関連アセットを公開する
 - **THEN** 新ツールは対応する `/<tool>/` で動作し、既存ツールの URL は維持される
+
+### Requirement: Use a consistent dark theme
+公開 HTML ページは暗い背景と読みやすい明るい文字色を使ったダークテーマで統一しなければならない（MUST）。入力・ボタン・カードなどの操作部は背景から識別でき、フォーカス状態を確認できなければならない（MUST）。
+
+#### Scenario: Open any public page
+- **WHEN** 利用者がトップページまたはツールページを開く
+- **THEN** ページ全体がダークテーマで表示され、主要な文字と操作部を背景から識別できる

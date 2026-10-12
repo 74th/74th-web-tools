@@ -40,6 +40,14 @@ VS Code のタイトルバーと Remote SSH 接続を示すステータスバー
 - **WHEN** カラーピッカーでプリセット以外の `#123456` を選ぶ
 - **THEN** 選択中のタブの背景色と表示 JSON が `#123456` に更新され、前景色は `#FFFFFF` のままである
 
+### Requirement: Preview title bar and Remote SSH colors
+ツールは VS Code のタイトルバー、左側のアクティビティバーと Explorer、エディター、下部ステータスバーを模したプレビューを表示しなければならない（MUST）。プレビューのタイトルバーと Remote SSH インジケーターは、それぞれの選択色を常に表示しなければならず（MUST）、Remote SSH インジケーターはステータスバーの左端に配置しなければならない（MUST）。
+
+#### Scenario: Compare both selected colors
+- **WHEN** 利用者がタイトルバーと Remote SSH の色を選ぶ
+- **THEN** プレビュー上部のタイトルバーと下部左端の Remote SSH インジケーターに各色が表示される
+- **THEN** 片方の色を変えても、もう片方の選択色は保持される
+
 ### Requirement: Generate title bar JSON
 タイトルバータブは `workbench.colorCustomizations` 内に `titleBar.activeBackground` と `titleBar.inactiveBackground` を選択色、`titleBar.activeForeground` と `titleBar.inactiveForeground` を `#FFFFFF` とする有効な JSON を生成しなければならない（MUST）。
 

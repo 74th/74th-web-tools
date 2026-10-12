@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VS Code のタイトルバーと Remote SSH インジケーターの色設定を作成します。">
+    <title>VS Code ワークスペースカラー設定</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="74th Web Tools トップページ">74th <span>WEB TOOLS</span></a>
+      <a class="repo-link" href="https://github.com/74th/74th-web-tools">GitHub リポジトリ <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">VS CODE · WORKSPACE</p>
+        <h1 id="page-title">ワークスペースカラー設定</h1>
+        <p class="intro-copy">タイトルバーや Remote SSH インジケーターに色を付けて、ウィンドウを見分けやすくします。</p>
+      </section>
+
+      <section class="tool-card" aria-label="カラー設定ジェネレーター">
+        <div class="tabs" role="tablist" aria-label="設定する場所">
+          <button class="tab" id="tab-title" type="button" role="tab" aria-selected="true" aria-controls="panel-controls" tabindex="0">タイトルバー</button>
+          <button class="tab" id="tab-remote" type="button" role="tab" aria-selected="false" aria-controls="panel-controls" tabindex="-1">Remote SSH</button>
+        </div>
+
+        <div class="workspace-grid">
+          <section class="controls" id="panel-controls" role="tabpanel" aria-labelledby="tab-title" tabindex="0">
+            <div class="section-heading">
+              <div>
+                <h2>背景色を選ぶ</h2>
+                <p id="target-description">ウィンドウ上部のタイトルバーに色を設定します。</p>
+              </div>
+              <span class="color-value" id="color-value">#1769D2</span>
+            </div>
+
+            <div class="presets" aria-label="色のプリセット">
+              <button class="swatch" type="button" data-color="#1769D2" aria-label="ブルー #1769D2" aria-pressed="true" style="--swatch:#1769D2"><span>ブルー</span></button>
+              <button class="swatch" type="button" data-color="#008FAF" aria-label="シアン #008FAF" aria-pressed="false" style="--swatch:#008FAF"><span>シアン</span></button>
+              <button class="swatch" type="button" data-color="#16834A" aria-label="グリーン #16834A" aria-pressed="false" style="--swatch:#16834A"><span>グリーン</span></button>
+              <button class="swatch" type="button" data-color="#C65A0A" aria-label="オレンジ #C65A0A" aria-pressed="false" style="--swatch:#C65A0A"><span>オレンジ</span></button>
+              <button class="swatch" type="button" data-color="#C42B36" aria-label="レッド #C42B36" aria-pressed="false" style="--swatch:#C42B36"><span>レッド</span></button>
+              <button class="swatch" type="button" data-color="#7641C5" aria-label="パープル #7641C5" aria-pressed="false" style="--swatch:#7641C5"><span>パープル</span></button>
+              <button class="swatch" type="button" data-color="#C12C85" aria-label="ピンク #C12C85" aria-pressed="false" style="--swatch:#C12C85"><span>ピンク</span></button>
+              <button class="swatch" type="button" data-color="#A17A00" aria-label="イエロー #A17A00" aria-pressed="false" style="--swatch:#A17A00"><span>イエロー</span></button>
+            </div>
+
+            <label class="custom-color" for="custom-color">
+              <span class="picker-icon" aria-hidden="true">◉</span>
+              <span><strong>カスタムカラー</strong><small>カラーピッカーから自由に選べます</small></span>
+              <input id="custom-color" type="color" value="#1769d2" aria-label="カスタム背景色を選択">
+            </label>
+
+            <div class="preview" aria-label="VS Code ウィンドウの色プレビュー">
+              <div class="preview-titlebar" id="preview-titlebar">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="titlebar-navigation" aria-hidden="true"><i>‹</i><i>›</i></span>
+                <span class="titlebar-location">SSH: development&nbsp; ~/projects/my-project</span>
+                <span class="titlebar-actions" aria-hidden="true"><i>▣</i><i>◧</i><i>▤</i></span>
+              </div>
+              <div class="preview-workspace">
+                <aside class="activity-bar" aria-hidden="true"><span class="activity-selected">▤</span><span>⑂</span><span>⌕</span><span>▷</span><span>▣</span></aside>
+                <aside class="explorer-panel" aria-hidden="true">
+                  <div class="explorer-heading">EXPLORER <span>•••</span></div>
+                  <div class="explorer-section">›　Outline</div>
+                  <div class="explorer-section">›　Timeline</div>
+                  <div class="project-heading">⌄　my-project <span>[SSH: development]</span></div>
+                  <div class="file-row indent-one">›　.agents</div>
+                  <div class="file-row indent-one">›　.vscode</div>
+                  <div class="file-row indent-one selected-file">　　<span class="json-icon">{ }</span> settings.json</div>
+                  <div class="file-row indent-one">›　docs</div>
+                  <div class="file-row indent-one">›　openspec</div>
+                  <div class="file-row indent-one">›　pages</div>
+                </aside>
+                <section class="editor-area" aria-hidden="true">
+                  <div class="editor-welcome">
+                    <div><span>Open Chat</span><kbd>⌃</kbd><kbd>⌘</kbd><kbd>I</kbd></div>
+                    <div><span>Show All Commands</span><kbd>⌃</kbd><kbd>⇧</kbd><kbd>P</kbd></div>
+                    <div><span>Start Debugging</span><kbd>⌃</kbd><kbd>⇧</kbd><kbd>D</kbd></div>
+                  </div>
+                </section>
+              </div>
+              <div class="preview-status">
+                <div class="status-left">
+                  <span class="remote-indicator" id="preview-remote"><span aria-hidden="true">›‹</span> SSH: development</span>
+                  <span>⑂　main*</span><span>⟳</span><span>⌁</span>
+                </div>
+                <div class="status-right"><span>Live Share</span><span>-- NORMAL --</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="output" aria-labelledby="output-title">
+            <div class="output-heading">
+              <div><p class="eyebrow">YOUR SETTINGS</p><h2 id="output-title">生成された JSON</h2></div>
+              <button class="copy-button" id="copy-button" type="button"><span aria-hidden="true">▢</span> JSON をコピー</button>
+            </div>
+            <pre class="json-box"><code id="json-output" tabindex="0" aria-label="コピーできる設定 JSON"></code></pre>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite">JSON を選択して手動でコピーすることもできます。</p>
+            <aside class="note"><span class="note-mark" aria-hidden="true">i</span><p><strong>設定への追加方法</strong><br>生成した内容を既存の <code>workbench.colorCustomizations</code> に統合してください。設定全体を置き換えると、既存の色設定が消える場合があります。</p></aside>
+          </section>
+        </div>
+      </section>
+
+      <p class="remote-note" id="remote-note"><span aria-hidden="true">↳</span> Remote SSH はステータスバー全体ではなく、リモート接続を示すインジケーターの色を変更します。</p>
+    </main>
+
+    <footer class="site-footer"><a href="https://github.com/74th/74th-web-tools">74th/74th-web-tools</a><span>シンプルなブラウザー内ツール</span></footer>
+  </body>
+</html>

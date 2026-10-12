@@ -8,6 +8,7 @@
 
 - GitHub Actions から `pages/` を GitHub Pages に配信し、`tools.74th.tech` をカスタムドメインとして利用する。
 - `pages/index.html` に公開ツールの一覧を設け、各ツールを `pages/<tool>/index.html` と `/<tool>/` の対応で公開する。
+- トップページと各ツールページの配色を統一したダークテーマにする。
 - `vscode-workspace-color` にタイトルバー／Remote SSH インジケーターの切り替え、8 色のプリセット、カラーピッカー、JSON の表示とコピーを提供する。
 - ルート `AGENTS.md` にツール追加時の一覧更新、全ページのリポジトリリンク、OpenSpec とページの対応ルールを記載する。
 - ツールの仕様を `openspec/specs/<tool>/spec.md` にまとめ、細分化する場合は `openspec/specs/<tool>/<capability>/spec.md` に配置する。
