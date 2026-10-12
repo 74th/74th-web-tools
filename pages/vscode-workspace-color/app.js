@@ -11,16 +11,17 @@ const remoteNote = document.querySelector('#remote-note');
 let activeTarget = 'title';
 
 function settingsFor(target, color) {
+  const foreground = color.toUpperCase() === '#FFFFFF' ? '#000000' : '#FFFFFF';
   const colorCustomizations = target === 'title'
     ? {
         'titleBar.activeBackground': color,
         'titleBar.inactiveBackground': color,
-        'titleBar.activeForeground': '#FFFFFF',
-        'titleBar.inactiveForeground': '#FFFFFF',
+        'titleBar.activeForeground': foreground,
+        'titleBar.inactiveForeground': foreground,
       }
     : {
         'statusBarItem.remoteBackground': color,
-        'statusBarItem.remoteForeground': '#FFFFFF',
+        'statusBarItem.remoteForeground': foreground,
       };
   return { 'workbench.colorCustomizations': colorCustomizations };
 }
@@ -37,7 +38,9 @@ function render() {
     ? 'ウィンドウ上部のタイトルバーに色を設定します。'
     : 'ステータスバーに表示される Remote SSH インジケーターに色を設定します。';
   document.querySelector('#preview-titlebar').style.backgroundColor = colors.title;
+  document.querySelector('#preview-titlebar').style.color = colors.title.toUpperCase() === '#FFFFFF' ? '#000000' : '#FFFFFF';
   document.querySelector('#preview-remote').style.backgroundColor = colors.remote;
+  document.querySelector('#preview-remote').style.color = colors.remote.toUpperCase() === '#FFFFFF' ? '#000000' : '#FFFFFF';
   titleTab.setAttribute('aria-selected', String(activeTarget === 'title'));
   titleTab.tabIndex = activeTarget === 'title' ? 0 : -1;
   remoteTab.setAttribute('aria-selected', String(activeTarget === 'remote'));

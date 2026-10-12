@@ -2,6 +2,14 @@
 
 HTML、CSS、ブラウザー JavaScript で動作する静的ツール集です。公開するファイルは `pages/` に置き、ツールごとに `pages/<tool>/` を作成します。
 
+## 公開サイトとツール
+
+公開サイト: [74th Web Tools](https://tools.74th.tech/)
+
+現在公開しているツール:
+
+- [VS Code ワークスペースカラー設定](https://tools.74th.tech/vscode-workspace-color/)
+
 ## ローカルで見る
 
 リポジトリのルートでプレビューコマンドを実行します。
